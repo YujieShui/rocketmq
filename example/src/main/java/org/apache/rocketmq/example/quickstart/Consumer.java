@@ -72,6 +72,8 @@ public class Consumer {
             }
         });
 
+        // 设置 NameServer 地址，保证  Consumer 可以从 NameServer 获取到 Broker 地址
+        consumer.setNamesrvAddr("127.0.0.1:9876");
         /*
          *  Launch the consumer instance.
          */

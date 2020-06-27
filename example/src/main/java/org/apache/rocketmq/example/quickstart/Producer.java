@@ -45,12 +45,15 @@ public class Producer {
          * </pre>
          */
 
+        // 设置 NameServer 地址，保证  Producer 可以从 NameServer 获取到 Broker 地址
+        producer.setNamesrvAddr("127.0.0.1:9876");
         /*
          * Launch the instance.
          */
         producer.start();
 
-        for (int i = 0; i < 1000; i++) {
+        // 本来是发送 1000 条消息，改成发送 3 条
+        for (int i = 0; i < 3; i++) {
             try {
 
                 /*
